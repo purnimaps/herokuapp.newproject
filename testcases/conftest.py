@@ -28,7 +28,7 @@ def pytest_runtest_makereport(item, call):
 
 
 def pytest_html_report_title(report):
-    report.title = "My very own title!"
+    report.title = "Interesting Report!!!!!!!!!!!!!!"
 
 def _capture_screenshot(name):
     driver.get_screenshot_as_file(name)
