@@ -5,6 +5,7 @@ class HomePage:
     checkboxes = "//a[contains(text(),'Checkboxes')]"
     nestedFrame = "Nested Frames"
     abTesting = "//*[text()='A/B Testing']"
+    fileDownload = 'File Download'
 
     def __init__(self,driver):
         self.driver = driver
@@ -19,6 +20,9 @@ class HomePage:
 
     def clickabTesting(self):
         self.driver.find_element(By.XPATH,self.abTesting).click()
+
+    def clickFileDownload(self):
+         self.driver.find_element(By.LINK_TEXT,self.fileDownload).click()
 
 
 
