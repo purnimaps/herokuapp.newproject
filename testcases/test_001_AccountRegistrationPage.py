@@ -1,4 +1,7 @@
 import os
+
+import pytest
+
 from pageObjects.HomePage import HomePage
 from pageObjects.AccountRegistrationPage import AccountRegistrationPage
 from utilities.readProperties import ReadConfig
@@ -10,6 +13,8 @@ class Test_001_AccountReg:
     # baseURL = "https://the-internet.herokuapp.com/"
     baseURL = ReadConfig.getApplicationUrl()
     logger = LogGen.loggen()
+
+    @pytest.mark.regression
     def test_account_reg(self,setup):
         self.logger.info("************ starting the testcase **********")
         self.driver = setup

@@ -10,3 +10,6 @@ class Input:
     def clickInput(self):
         self.driver.find_element(By.LINK_TEXT,self.inputLocator).click()
 
+    def getElement(self):
+        ele = self.driver.find_element(By.XPATH,self.numberXpath)
+        return ele

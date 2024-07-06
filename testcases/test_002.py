@@ -1,5 +1,6 @@
+import pytest
+
 from utilities.readProperties import ReadConfig
-from testcases import conftest
 from utilities.customLogger import LogGen
 from pageObjects.HomePage import HomePage
 from pageObjects.AccountRegistrationPage import AccountRegistrationPage
@@ -8,6 +9,7 @@ class Test_002:
     baseurl = ReadConfig.getApplicationUrl()
     logger = LogGen.loggen()
 
+    @pytest.mark.sanity
     def test_file_download(self,setup):
         self.logger.info("-------------Testing download of a file-------------------")
         self.driver = setup

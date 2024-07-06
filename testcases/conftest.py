@@ -69,7 +69,7 @@ def pytest_metadata(metadata):
     metadata.pop("Plugins",None)
 
 #specifying report folder location and save report with timestamp
-@pytest.hookimpl(tryfirst=True)
+@pytest.hookimpl(optionalhook=True)
 def pytest_configure(config):
     config.option.htmlpath = os.path.abspath(os.curdir)+"\\reports\\"+datetime.now().strftime("%d-%m-%Y %H-%M-%S")+".html"
 
